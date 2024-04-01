@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="MyPortfolio.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <h1>Alexis Castro</h1>
+            <nav>
+                <ul>
+                    <li>Resume</li>
+                    <li>Projects</li>
+                    <li>Contact</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="item2">
+            <div class="ball"></div>
+        </div>
+        <div class="item3">Hello, I am learning how to code</div>
+        <div class="item4">
+            <div class="ball"></div>
+        </div>
+        <div class="item5"></div>
+    </div>
+</body>
+
+  <script>
+    var balls = document.getElementsByClassName("ball");
+    document.onmousemove = () => {
+      var x = (event.clientX * 100) / window.innerWidth + "px";
+      var y = (event.clientY * 100) / window.innerHeight + "px";
+
+      for (let i = 0; i < 2; i++) {
+        balls[i].style.left = x;
+        balls[i].style.top = y;
+        balls[i].transform = "translate(-" + x + ",-" + y + ")";
+      }
+    };
+  </script>
+
+</html>
