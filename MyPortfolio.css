@@ -90,3 +90,8 @@ width: 75%;
   padding: 20px 0;
   font-size: 30px;
 }
+
+a{
+  text-decoration: none;
+  color: black;
+}
